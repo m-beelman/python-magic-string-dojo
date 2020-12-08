@@ -13,7 +13,7 @@ def magic_string_function(numbers_as_string):
 
 def test_task_1():
     assert magic_string_function("1,2,4") == 7
-    assert magic_string_function("1.2,7.6,4") == 12.8
+    assert round(magic_string_function("1.2,7.6,4"),1) == 12.8
     assert magic_string_function("") == 0
 
 # 2. Erweitere die Funktion so, das ich eine variable Anzahl von string übergeben kann
@@ -23,7 +23,7 @@ def test_task_1():
 
 # def test_task_2():
 #     assert magic_string_function("1","2","4") == 7
-#     assert magic_string_function("1.2,7.6", "4") == 12.8
+#     assert round(magic_string_function("1.2,7.6", "4"),1) == 12.8
 
 # 3. Erweitere die Funktion so, das neben dem Komma das ';' auch als Seperator dienen kann
 # magic_string_function("1;2,4") liefert mir das Ergebnis von 1 + 2 + 4 zurück, also 7
@@ -32,7 +32,7 @@ def test_task_1():
 
 # def test_task_3():
 #     assert magic_string_function("1;2,4") == 7
-#     assert magic_string_function("1.2;7.6", "4") == 12.8
+#     assert round(magic_string_function("1.2;7.6", "4"),1) == 12.8
 
 # 4. Erweitere die Funktion so, das niemals der Seperator als letztes Zeichen String vorkommt
 # magic_string_function("1;2,4,") liefert None und gibt auf der Konsole die Ausgabe "The string should not end with a seperator character."
@@ -40,7 +40,7 @@ def test_task_1():
 
 # def test_task_4():
 #     assert magic_string_function("1;2,4,") == None
-#     assert magic_string_function("1.2;7.6", "4") == 12.8
+#     assert round(magic_string_function("1.2;7.6", "4"),1) == 12.8
 
 
 # 5. Erweitere die Funktion so, das ich der Methode als optionale Parameter einen weiteren Seperator übergeben kann
@@ -49,4 +49,4 @@ def test_task_1():
 
 # def test_task_5():
 #     assert magic_string_function("1;2:4", opt_sep=":") == 7
-#     assert magic_string_function("1.2|7.6", "4", opt_sep="|") == 12.8
+#     assert round(magic_string_function("1.2|7.6", "4", opt_sep="|"),1) == 12.8
